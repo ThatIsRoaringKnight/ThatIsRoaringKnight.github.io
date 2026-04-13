@@ -1,27 +1,25 @@
-/* style.css */
-body {
-    background-color: #000;
-    color: white;
-}
-
 .flashbang {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    opacity: 0; /* Initially hidden */
-    z-index: 9999; /* Stay on top */
-    pointer-events: none; /* Allows clicking through it */
-    
-    /* Animation name, duration, timing function */
-    animation: flash 1s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 9999; /* Ensures it is on top */
+  animation: flashbang-effect 1.5s ease-in-out forwards;
 }
 
-/* Keyframes for the blinding effect */
-@keyframes flash {
-    0% { opacity: 0; }
-    10% { opacity: 1; } /* Instant bright flash */
-    100% { opacity: 0; } /* Fade out */
+@keyframes flashbang-effect {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  10% {
+    background-color: white; /* Instant white */
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    background-color: transparent;
+  }
 }

@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Surprise Mf!</title>
-  </head>
-  <body style="background-color: black;">
-    <p style="font-family: Comic Sans MS, Comic Sans, cursive;">SUPRISE MOTHER F***ER.</p>
-    <meta http-equiv="refresh" content="5; url="FLASHBANG.html">
-  </body>
-</html>
+/* style.css */
+body {
+    background-color: #000;
+    color: white;
+}
+
+.flashbang {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0; /* Initially hidden */
+    z-index: 9999; /* Stay on top */
+    pointer-events: none; /* Allows clicking through it */
+    
+    /* Animation name, duration, timing function */
+    animation: flash 1s ease-in-out;
+}
+
+/* Keyframes for the blinding effect */
+@keyframes flash {
+    0% { opacity: 0; }
+    10% { opacity: 1; } /* Instant bright flash */
+    100% { opacity: 0; } /* Fade out */
+}

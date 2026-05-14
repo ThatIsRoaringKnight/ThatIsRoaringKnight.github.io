@@ -34,7 +34,17 @@ ul li a {
 ul li a:hover {
   background-color: #111111;
 }
+
+div.sticky {
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color:rgb(255,0,255);
+  border: 2px solid #4CAF50;
+}
 </style>
+</head>
+
 <body>
 
 <ul>
@@ -44,20 +54,11 @@ ul li a:hover {
   <li><a href="#about">About</a></li>
 </ul>
 
-<style>
-div.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 5px;
-  background-color: #cae8ca;
-  border: 2px solid #4CAF50;
-}
-<h2>Staff Information</h2>
-</style>
+<div class="sticky">
+  <h2>Staff Information</h2>
+</div>
 
 <p>Some text on the website.</p>
 
 </body>
-</head>
 </html>
